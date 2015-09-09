@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo
+echo "LaTeX Reference Card Creator. Copyright (C) Anthony Bradford 2012."
+echo
+echo "****For APT-based GNU/Linux such as Ubuntu systems run"
+echo "sudo apt-get install make texlive dvi2ps aspell linkchecker imagemagick zip unzip tar diction tex4ht"
+echo
+echo "****For RPM-based GNU/Linux such as Fedora systems run"
+echo "yum install make texlive texinfo-tex texlive-collection-basic texlive-collection-latex dvi2ps linkchecker aspell ImageMagick zip unzip tar diction tex4ht"
+echo
+echo "****For openSUSE/SUSE Linux Enterprise run"
+echo "sudo zypper install make texlive dvi2ps aspell linkchecker imagemagick zip unzip tar tex4ht"
+echo
+echo "****For Windows Cygwin systems install the following packages"
+echo "make texlive dvi2ps aspell linkchecker ImageMagick zip unzip tar diction tex4ht"
+echo

@@ -1,0 +1,27 @@
+The shell script './configure' gives system specific instructions on packages
+needed for LaTeX Reference Card Creator.
+
+From a LaTeX source build PDF, TeX DVI and PostScript reference cards.
+
+Type 'make' on the command line to build the reference cards.
+Type 'make pdf' to build the pdf reference card.
+Type 'make djvu' to build the Djvu reference card.
+Type 'make dvi' to build the dvi reference card.
+Type 'make ps' to build the PostScript reference card.
+Type 'make dvipdfm' create PDF with dvipdfm.
+Type 'make pdflatex' create PDF with pdflatex.
+Type 'make text' to build a plain text file of the reference card content.
+Type 'make spelling' to spell check.
+Type 'make html' use latex2html to generate HTML.
+Type 'make html2' use htlatex to generate HTML.
+Type 'make linkchecker' to search reference card for dead links.
+Type 'make zip' make zip file of all output formats.
+Type 'make distclean ; make dist' to create LaTeXreferenceCard-1.0.tar.gz
+source distribution.
+
+See documentation in doc/ directory.
+
+For OSX install this: https://www.tug.org/mactex/
+
+The scripts for this repo as well as the base for the refcard came from
+http://anthonybradford.com/LaTeXreferenceCard/

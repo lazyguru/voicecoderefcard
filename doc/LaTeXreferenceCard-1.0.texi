@@ -1,0 +1,408 @@
+\input texinfo @c -*-texinfo-*-
+@c %**start of header
+@set VERSION 1.0
+@set Website AnthonyBradford.com
+@set Directory LaTeXreferenceCard
+@set Manual LaTeXreferenceCard-1.0
+@setfilename @value{Manual}.info
+@settitle @LaTeX{} Reference Card Creator
+@paragraphindent none
+@codequoteundirected on
+
+@c Define a new index for options.
+@defcodeindex op
+@c Combine everything into one index (arbitrarily chosen to be the
+@c concept index).
+@syncodeindex op cp
+@c %**end of header
+@image{images/paper1,,80pt,Clip art of a reference card,png}
+
+@copying
+This manual is for @LaTeX{} Reference Card Creator (version @value{VERSION}, @today{}), a @file{Makefile} based build system for creating @LaTeX{} reference cards.
+
+@quotation
+Copyright @copyright{}  @var{2012}  @var{Anthony Bradford}.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+Texts.  A copy of the license is included in the section entitled ``GNU
+Free Documentation License''.
+
+@end quotation
+@end copying
+
+@dircategory LaTeX Reference Card
+@direntry
+* LaTeX Reference Card.               Reference
+@end direntry
+
+@titlepage
+@title @LaTeX{} Reference Card Creator
+@subtitle for version @value{VERSION}
+@sp 10
+@author @email{anthony_bradford@@yahoo.com,Anthony Bradford}
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@ifnothtml
+@contents
+@end ifnothtml
+
+@ifnottex
+@node Top
+@top @LaTeX{} Reference Card Creator Version 1.0
+ 
+This is the @LaTeX{} Reference Card Creator Manual. Copyright @copyright{} 2012.
+@end ifnottex
+
+@html
+@ifset PDF
+<a href="@value{Manual}.pdf">PDF content of this website</a>
+<br>
+@end ifset
+@ifset DJVU
+<a href="@value{Manual}.djvu">DjVu content of this website</a>
+<br>
+@end ifset
+@ifset SPLIT
+<a href="index.html">Split HTML content of this website</a>
+<br>
+@end ifset
+@ifset NOSPLIT
+<a href="indexNoSplit.html">Non-Split HTML content of this website</a>
+<br>
+@end ifset
+@ifset TEXT
+@cindex Text
+@cindex Plain Text
+<a href="@value{Manual}.txt">Text content of this website</a> 
+<br>
+@end ifset
+@ifset EPUB
+@cindex EPUB
+<a href="@value{Manual}.epub">EPUB content of this website</a> 
+<br>
+@end ifset
+@ifset POSTSCRIPT
+@cindex PostScript
+<a href="@value{Manual}.ps">PostScript content of this website</a> 
+<br>
+@end ifset
+@ifset DVI
+@cindex @TeX{} DVI
+@cindex DVI
+<a href="@value{Manual}.dvi">@TeX{} DVI content of this website</a> 
+<br>
+@end ifset
+@ifset ZIP
+@cindex Zip
+<a href="@value{Manual}.zip">HTML zip package of this website</a>
+<br>
+@end ifset
+<br>
+@end html
+
+@ifnottex
+@menu
+* Overview of @LaTeX{} Reference Card Creator::
+* Downloading @LaTeX{} Reference Card Creator::
+* Compiling and viewing content::
+* Misc::
+* GNU Free Documentation License::
+* Concept index::	Index of concepts.
+@end menu
+@end ifnottex
+
+@html
+@ifset LongContents
+@contents
+@end ifset
+@ifset ShortContents
+@shortcontents
+@end ifset
+@center @url{http://@value{Website}/@value{Directory}/files/LaTeXreferenceCardExample.pdf,@LaTeX{} Reference Card Template}
+@center @image{images/LaTeXreferenceCard,,60pt,LaTeX Reference Card Template,png}
+@end html
+
+@node Overview of @LaTeX{} Reference Card Creator
+@chapter Overview of @LaTeX{} Reference Card Creator
+@cindex @LaTeX{}
+@cindex @TeX{} DVI
+@cindex PostScript
+@cindex PDF
+@cindex DjVu
+@LaTeX{} Reference Card Creator is a @file{Makefile} based build system for creating reference cards. @LaTeX{} Reference Card Creator compiles content into PDF, DjVu, @TeX{} DVI and PostScript output formats. A three column reference card will be created. Other features include batch image format conversions, spelling checker, broken link checking, automatic backups and distribution building.
+@*
+@*
+@LaTeX{} Reference Card Creator provides many @LaTeX{} examples which can be used to make a reference card.
+
+@ifnothtml
+@center @url{http://@value{Website}/@value{Directory}/files/LaTeXreferenceCardExample.pdf,@LaTeX{} Reference Card Template}
+@center @image{images/LaTeXreferenceCard,,335pt,LaTeX Reference Card Template,png}
+@end ifnothtml
+
+@node Downloading @LaTeX{} Reference Card Creator
+@chapter Downloading @LaTeX{} Reference Card Creator
+
+@section Downloading
+@cindex LaTeXreferenceCard-@value{VERSION}.tar.gz
+@cindex tar
+@cindex .tar.gz
+@LaTeX{} Reference Card Creator can be downloaded as a gzipped tar file from
+@*
+@url{http://@value{Website}/@value{Directory}/LaTeXreferenceCard-@value{VERSION}.tar.gz,LaTeXreferenceCard-@value{VERSION}.tar.gz}.
+
+@section Configuring
+After downloading type the following commands
+
+@cindex configure
+@example
+tar xfz LaTeXreferenceCard-@value{VERSION}.tar.gz
+cd LaTeXreferenceCard-@value{VERSION}
+./configure
+@end example
+@cindex autotools
+The configure shell script will give system specific instructions on package installation depending on your system. This is not a autotools package.
+
+@node Compiling and viewing content
+@chapter Compiling and viewing content
+
+@section Compiling the reference card
+@cindex make
+In the directory @file{LaTeXreferenceCard-@value{VERSION}/} type the GNU/Linux command
+@example
+make
+@end example
+@cindex Makefile
+The @file{Makefile} will execute and the following files
+will build.
+@table @samp
+@item LaTeXreferenceCard-@value{VERSION}.pdf
+@cindex .pdf
+@cindex PDF
+PDF version of the reference card.
+@item LaTeXreferenceCard-@value{VERSION}.dvi
+@cindex .dvi
+@cindex @TeX{} DVI
+@TeX{} DVI version of the reference card.
+@item LaTeXreferenceCard-@value{VERSION}.ps
+@cindex .ps
+@cindex PostScript
+PostScript version of the reference card.
+@end table
+The command @command{latex} converts @file{LaTeXreferenceCard-@value{VERSION}.tex} to DVI, @command{dvips} converts DVI to PostScript, @command{ps2pdf} converts PostScript to PDF.
+
+@subsection More building options
+@table @samp
+@item make pdf
+Use @command{latex}, @command{dvips} and @command{ps2pdf} to create @file{LaTeXreferenceCard-@value{VERSION}.pdf}. All GIF, PNG, JPEG images in the directory @file{images/} will be converted to EPS automatically. Same as @command{make} or @command{make all}.
+@cindex DjVu
+@item make djvu
+Use @command{latex}, @command{dvips}, @command{ps2pdf} and @command{pdf2djvu} to create the DjVu file @file{LaTeXreferenceCard-@value{VERSION}.djvu}. All GIF, PNG, JPEG images in the directory @file{images/} will be converted to EPS automatically.
+@item make pdflatex
+Use @command{pdflatex} to create the PDF file @file{LaTeXreferenceCard-@value{VERSION}.pdf}. All EPS images in the directory @file{images/} will be converted to PDF automatically.
+@cindex dvipdfm
+@item make dvipdfm
+Use @command{latex} and @command{dvipdfm} to create the PDF file @file{LaTeXreferenceCard-@value{VERSION}.pdf}. All GIF, PNG, JPEG images in the directory @file{images/} will be converted to EPS automatically.
+@cindex make dvi
+@item make dvi
+Use @command{latex} to create @TeX{} DVI file @file{LaTeXreferenceCard-@value{VERSION}.dvi}. All GIF, PNG, JPEG images in the directory @file{images/} will be converted to EPS automatically.
+@cindex PostScript
+@cindex dvips
+@cindex make ps
+@item make ps
+Use @command{latex} and @command{dvips} to create PostScript file @file{LaTeXreferenceCard-@value{VERSION}.ps}. All GIF, PNG, JPEG images in the directory @file{images/} will be converted to EPS automatically.
+@cindex dvi2ps
+@item make ps2
+Use @command{latex} and @command{dvi2ps} to create PostScript file @file{LaTeXreferenceCard-@value{VERSION}.ps}. All GIF, PNG, JPEG images in the directory @file{images/} will be converted to EPS automatically.
+@cindex dvi2tty
+@cindex make text
+@item make text
+Use @command{latex} and @command{dvi2tty} create plain text file @file{LaTeXreferenceCard-@value{VERSION}.txt}.
+@cindex latex2html
+@cindex html
+@cindex make html
+@item make html
+Use @command{latex2html} to compile to HTML.
+@cindex htlatex
+@cindex make html2
+@item make html2
+Use @command{htlatex} to compile to HTML.
+@cindex make zip
+@cindex Zip
+@cindex .zip
+@item make zip
+Makes a compress zip file of all current compiled output formats. This will create the file @file{LaTeXreferenceCard-@value{VERSION}.zip}.
+@cindex make clean
+@item make clean
+Deletes all content built by @LaTeX{} Reference Card Creator.
+@item make distclean
+Deletes all content built by @LaTeX{} Reference Card Creator and deletes content from the @file{bak/} directories.
+@cindex make dist
+@cindex make distclean
+@cindex .tar.gz
+@cindex LaTeXreferenceCard-@value{VERSION}.tar.gz
+@item make distclean ; make dist
+Makes a compressed source tar file of all sources including the @file{Makefile} and the @file{configure} file. This will create the file @file{LaTeXreferenceCard-@value{VERSION}.tar.gz}.
+@end table
+
+@section Viewing content
+To view the newly created content run the following command depending on which system or desktop you are running.
+@cindex kde-open
+@cindex Windows
+@cindex Cygwin
+@cindex GNOME Desktop
+@cindex nautilus
+@cindex explorer
+@multitable @columnfractions .33 .50
+@headitem Command @tab System
+@item nautilus .
+@tab GNOME Desktop
+@item kde-open .
+@tab KDE
+@item explorer .
+@tab Windows/Cygwin
+@end multitable
+@cindex LaTeXreferenceCard-@value{VERSION}.pdf
+@*
+Select the file @file{LaTeXreferenceCard-@value{VERSION}.pdf} to view it.
+@*
+@*
+@cindex PDF
+The PDF created should match the @url{http://@value{Website}/@value{Directory}/files/LaTeXreferenceCardExample.pdf,@LaTeX{} Reference Card Template}.
+
+@node Misc
+@chapter Misc
+
+@section @LaTeX{} resources
+@cindex Wikibooks @LaTeX{}
+The best @LaTeX{} resource is @url{http://www.google.com/search?q=wikibooks+LaTeX,Wikibooks @LaTeX{}}. Wikibooks @LaTeX{} is available in both HTML and PDF formats.
+
+@section Image format converting
+@anchor{Imageconverting}
+@LaTeX{} Web Publisher does batch image format conversions in the directory @file{latexpublisher-@value{VERSION}/images/}.
+Before any image conversion is done the @file{images/} directory is backed-up to the @file{latexpublisher-@value{VERSION}/images/bak/} directory. Images are converted to the target formats. The original image format file is left un-touched.
+
+@cindex .jpg
+@cindex .png
+@cindex .gif
+@cindex .eps
+@cindex .pdf
+@table @samp
+@cindex eps2pdf
+@cindex make eps2pdf
+@item make eps2pdf
+Converts EPS format to PDF format.
+@cindex eps2png
+@cindex make eps2png
+@item make eps2png
+Converts EPS format to PNG format.
+@cindex jpg2eps
+@cindex make jpg2eps
+@item make jpg2eps
+Converts JPG format to the EPS format.
+@cindex png2eps
+@cindex make png2eps
+@item make png2eps
+Converts PNG format to the EPS format.
+@cindex gif2eps
+@cindex make gif2eps
+@item make gif2eps
+Converts GIF format to the EPS format.
+@cindex jpg2png
+@item make jpg2png
+@cindex make jpg2png
+Converts JPG format to the PNG format.
+@cindex gif2png
+@item make gif2png
+Converts GIF format to the PNG format.
+@cindex gif2jpg
+@item make gif2jpg
+Converts GIF format to the JPG format.
+@cindex pdf2png
+@cindex PDF
+@item make pdf2png
+Converts PDF format to the PNG format.
+@end table
+
+@section Spell checking
+@cindex make spelling
+@cindex spelling
+To spell check content type on the command line
+@example
+make spelling
+@end example
+@cindex apsell
+@cindex GNU aspell
+@cindex .tex
+The GNU @command{aspell} interactive spell checker will be run on your @LaTeX{} (.tex) content. If @command{apsell} flags valid words as spelled wrong use the ``a) Add'' feature so these words are not flagged on the next run.
+@*
+@*
+For more information on @command{aspell} type @command{man aspell} on the command line.
+
+@section Broken link checking
+@cindex broken link checking
+@cindex linkchecker
+@cindex make linkchecker
+To find broken links in reference card run the command
+@example
+make linkchecker
+@end example
+A file @file{linkchecker-out.html} will be created. This file gives a report on bad links.
+View this file by typing
+@cindex firefox
+@example
+firefox linkchecker-out.html
+@end example
+on the command line.
+
+@section Renaming the name ``LaTeXreferenceCard-@value{VERSION}''
+@cindex renaming reference card
+The file name prefix 'LaTeXreferenceCard-@value{VERSION}' is set in two places. This prefix controls the name of output files such as @file{LaTeXreferenceCard-@value{VERSION}.pdf}, @file{LaTeXreferenceCard-@value{VERSION}.dvi} and @file{LaTeXreferenceCard-@value{VERSION}.ps}. You may want to change it to another name.
+@*
+@*
+@cindex Makefile
+Edit the @file{Makefile} variable 'LaTeXreferenceCard = LaTeXreferenceCard-@value{VERSION}' to something like 'LaTeXreferenceCard = YourName'. Rename the LaTeXreferenceCard-@value{VERSION}.tex on the command line with 'mv LaTeXreferenceCard-@value{VERSION}.tex YourName.tex'. This will change the prefix file name 'LaTeXreferenceCard-@value{VERSION}' to YourName. On the command line run @file{make} to test building the new outputs. The system will generate the files @file{YourName.pdf}, @file{YourName.dvi}, and @file{YourName.ps}.
+@*
+@*
+If the @file{Makefile} becomes corrupt, dated backups can be found the directory LaTeXreferenceCard-@value{VERSION}/bak/.
+
+@section Automatic backups
+@cindex automated backups
+@cindex backups
+Every time the command @command{make} is run the @file{LaTeXreferenceCard--@value{VERSION}/bak/} directory is populated with copies of the file @file{LaTeXreferenceCard-@value{VERSION}.tex} and the @file{Makefile}. The date is appended to the files. The format of the date is year, month and day (YYYYMMDD). Therefore a backup created on Jan 8th 2014 would create the files @file{bak/LaTeXreferenceCard-@value{VERSION}.tex.20140108} and @file{bak/Makefile.20140108}. These backup files can be used if the @file{LaTeXreferenceCard-@value{VERSION}.tex} or the @file{Makefile} become corrupt.
+
+@section More Projects
+
+@subsection @LaTeX{} Web Publishing Project
+@cindex @LaTeX{} Web Publisher
+A multi-format web publishing system with FTP deployment capabilities based on @LaTeX{}.
+@*
+See @url{http://AnthonyBradford.com/LaTeXpublisher,@LaTeX{} Web Publisher}.
+
+@subsection Texinfo Web Publisher Project
+@cindex Texinfo Web Publisher
+A multi-format web publishing system with FTP deployment capabilities based on GNU Texinfo.
+@*
+See @url{http://AnthonyBradford.com/TexinfoPublisher,Texinfo Web Publisher}.
+
+@subsection OptionMatrix
+@cindex  OptionMatrix
+A financial derivatives calculator supporting over 135 models.
+@*
+See @url{http://AnthonyBradford.com/om/,OptionMatrix}.
+
+@node GNU Free Documentation License
+@appendix GNU Free Documentation License
+@cindex GNU Free Documentation License
+@cindex license
+@include fdl.texi
+
+@node Concept index
+@unnumbered Concept index
+@printindex cp
+
+@bye

@@ -1,0 +1,201 @@
+\documentclass[10pt,landscape]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\hypersetup{pdfpagemode=UseNone}
+% Enable the next line so hyperlinks do not have blue boxes around them
+%\hypersetup{hidelinks}
+\usepackage{rotating}
+
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+
+% Turn off header and footer
+\pagestyle{empty}
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+
+\begin{center}
+     \Large{Voice Code Reference Card} \\
+\end{center}
+
+\begin{center}
+This refcard contains common commands for use with Dragon Dictate and VoiceCode \\
+\end{center}
+
+\hrule
+
+\begin{multicols}{3}
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\section{Alphabet}
+\begin{description}
+\item [A] arch
+\item [B] brov
+\item [C] char
+\item [D] dell
+\item [E] etch
+\item [F] fomp
+\item [G] goof
+\item [H] hark
+\item [I] ice
+\item [J] jinks
+\item [K] koop
+\item [L] lug
+\item [M] mowsh
+\item [N] nerb
+\item [O] ork
+\item [P] pooch
+\item [Q] quash
+\item [R] rosh
+\item [S] souk
+\item [T] teek
+\item [U] unks
+\item [V] verge
+\item [W] womp
+\item [X] trex
+\item [Y] yang
+\item [Z] zooch
+\end{description}
+
+\section{General Text Commands}
+\begin{description}
+\item [tarp] Sends the tab key
+\item [skoosh] Inserts a space
+\item [shock] Sends the enter key
+\item [randall] Sends the escape key
+\end{description}
+
+\section{Editing Commands}
+\begin{description}
+\item [scratchy] Attempts a "smart" undo
+\item [dizzle] Undo
+\item [rizzle] Redo
+\item [snatch] cut
+\item [stoosh] copy
+\item [spark] paste
+\item [junk] delete
+\item [olly] select all
+\item [shackle] select entire line
+\item [snipline] delete line
+\item [snipper] delete to end of line (from cursor)
+\item [snipple] delete to beginning of line (from cursor)
+\item [jolt] duplicate line
+\item [marco] find
+\item [freshly] reload/refresh (depends on context)
+\end{description}
+
+\section{Mouse}
+\begin{description}
+\item [chiff] Single left click
+\item [triplick] Single left click
+\item [duke] Double-click
+\item [chipper] Right click
+\item [pretzel] Click and hold
+\item [relish] Release
+\end{description}
+
+\section{Movement}
+\begin{description}
+\item [jeep] Up
+\item [doom] Down
+\item [crimp] Left
+\item [chris] Right
+\item [prome] Home
+\item [prend] End
+\item [skunkrim] Move the cursor by word to the left
+\item [skunkrish] Move the cursor by word to the right
+\item [fox <appname>] Open apps
+\item [swick] Switch apps
+\item [gibby/shibby] Switch window in app
+\end{description}
+
+\section{Text Manipulation}
+\begin{description}
+\item [champ] Capitalize
+\item [sname] sname\_text
+\item [cram] camelCase
+\item [dollcram] \$camelCase
+\item [spine] Spinal-case
+\end{description}
+
+\section{File/Window Operations}
+\begin{description}
+\item [sage] Save file
+\item [totch] Close window/tab
+\item [talky] Open new tab
+\end{description}
+
+\section{Symbols}
+\begin{description}
+\item [quackish] \textbackslash
+\item [equeft] " = "
+\item [smaqual] =
+\item [qualcoif] Opening quote
+\item [qualposh] Closing quote
+\item [brax] Inserts brackets and positions cursor between them
+\end{description}
+
+\section{Sublime Text}
+\begin{description}
+\item [spring] Go to line number
+\item [sprinkler] Go to line number then position cursor at end of line.
+\item [sprinkoon] Go to line number then insert a new line below.
+\item [spackle] Go to line number then select entire line.
+\item [bracken] Expand selection to quotes, parens, braces, or brackets
+\item [selrang] Selects text in a line range: selrang ten twenty
+\item [seltil] Selects text from current position through spoken line number: seltil five five.
+\item [trundle] Toggle comments on the line or range
+
+\end{description}
+
+\end{multicols}
+
+\end{document}
